@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | HTML 5</title>
+</head>
+
+<body>
+    <h1 id="inicio"> Desafio de projeto DIO HTML 5</h1>
+    <hr />
+
+    <h2>Percurso do curso de HTML DIO.me</h2>
+    <hr />
+    <ul>
+        <li>
+            <a href="#ferramentas">Ferramentas utilizadas</a>
+        </li>
+        <li>
+            <a href="#inspetor">Usando o Inspetor de Elementos</a>
+        </li>
+        <li>
+            <a href="#estrutura">Estrutura básica do <strong>HTML</strong></a>
+        </li>
+        <li>
+            <a href="#tags">Falando sobre Tags</a>
+        </li>
+        <li>
+            <a href="#atributos">Atributos básicos</a>
+        </li>
+        <li>
+            <a href="#">Executando uma página <strong>HTML</strong></a>
+        </li>
+        <li>
+            <a href="#textos">Textos no <strong>HTML</strong></a>
+        </li>
+        <li>
+            <a href="#listas">Listas ordenadas e não ordenadas no <strong>HTML</strong></a>
+        </li>
+        <li>
+            <a href="#links">Links no <strong>HTML</strong></a>
+        </li>
+    </ul>
+
+    <hr />
+
+    <h3 id="ferramentas">Ferramentas utilizadas</h3>
+    <p><i>Bom nessa parte de curso as Ferramentas utilizadas no curso são <strong>VSCODE</strong>, e um navegador para
+            renderizarmos a páginba HTML, mas temos
+            diversas ferramentas de desenvolvimento para trabalhar com o HTML.</i></p>
+    <small><a href="#inicio">(Voltar ao inicio)</a></small>
+
+    <h3 id="inspetor">Usando o Inspetor de Elementos</h3>
+    <p><i>A ferramenta de inspecionar elemento é um utilitário que permite visualizar o código-fonte subjacente de
+            qualquer
+            página web. Além disso, você pode usá-la para fazer alterações temporárias e ver os resultados em tempo
+            real,
+            deixando o código-fonte original intacto.
+
+            Isso é extremamente útil se você precisa testar uma alteração ou diagnosticar um problema. Também pode ser
+            de
+            grande valia se você encontrar um site com um recurso de que goste e estiver curioso para saber como ele foi
+            implementado.
+
+            A maioria dos principais navegadores, incluindo Chrome, Firefox e Safari, oferece algumas variações dessa
+            ferramenta. Vamos ver como acessá-la em cada um deles.</i></p>
+    <small><a href="#inicio">(Voltar ao inicio)</a></small>
+
+    <h3 id="estrutura">Estrutura básica do <strong>HTML</strong></h3>
+    <p><i>Um documento HTML válido precisa seguir obrigatoriamente a estrutura composta pelas tags <i>Html</i>,
+            head e body e a instrução
+            '!DOCTYPE'. Esta estrutura está informada em uma documentação que descreve todos os detalhes do HTML, no
+            caso as tags e atributos, e como os navegadores devem considerar e interpretar estas tags, esta documentação
+            é chamada de "especificação do HTML", e através do que está declarado nela que é possível entender se um
+            documento HTML válido. Um documento HTML inválido é carregado pelo navegador, porém em um "modo de
+            compatibilidade", vamos entender melhor sobre isto logo mais.
+
+            Abaixo, vamos conhecer em detalhes cada uma das tags estruturais obrigatórias:
+            A tag 'html'
+
+            Na estrutura do nosso documento, antes de começar a colocar o conteúdo, inserimos uma tag 'html'. Dentro
+            dessa tag, é necessário declarar outras duas tags:
+
+            'head' e
+
+            'body'. Essas duas tags são "irmãs", pois estão no mesmo nível hierárquico em relação à sua tag "mãe", que é
+            'html'.
+
+            'html'
+            <!-- mãe -->
+
+            'head''head'
+            <!-- filha -->
+
+            'body''body'
+            <!-- filha -->
+
+            'html'
+
+            A tag
+
+            'head'
+
+            A tag'head' contém informações sobre o documento HTML que são de interesse somente do navegador e para
+            outros serviços da web, e não para as pessoas que vão acessar nosso site. São informações que
+            não serão exibidas diretamente no navegador, também podemos considerar um local onde informamos
+            os metadados sobre a página.
+
+            A especificação do HTML obriga a presença da tag de conteúdo "title" dentro da
+
+            'head', permitindo definir o título do documento, que poder ser visto na barra de título ou
+            aba da janela do navegador. Caso contrário, a página não será um documento HTML válido.
+
+            Outra configuração muito importante, principalmente em documentos HTML cujo conteúdo é
+            escrito em um idioma como o português, que contém caracteres "especiais" (acentos e
+            cedilha), é a codificação/conjunto de caracteres, chamada de encoding ou charset.
+
+            Podemos configurar qual codificação queremos utilizar em nosso documento por meio da
+            configuração de charset na tag
+            'meta'. Um dos valores mais comuns usados hoje em dia é o UTF-8, também chamado de
+            Unicode. Há outras possibilidades, como o latin1, muito usado antigamente.
+
+            O UTF-8 é a recomendação atual para encoding na Web por ser amplamente suportada em
+            navegadores e editores de código, além de ser compatível com praticamente todos os
+            idiomas do mundo. É o que usaremos no curso.
+
+            'html'
+
+            'head'
+            'meta charset="utf-8"'
+            'title'Blog sobre HTML'title'
+            'head'
+            'body'
+            'body'.
+        </i>
+    </p>
+    <small><a href="#incio">(Voltar ao inicio)</a></small>
+
+    <h3 id="tags">Falando sobre Tags</h3>
+    <p><i>"
+            <!--...--> Define um comentário;
+            !DOCTYPE> Define o tipo de documento; (No HTML 4 existiam três (3) diferentes tipos de doctype, mas no HTML
+            5
+            temos apenas um (1) tipo
+            !DOCTYPE HTML>. É aqui que o navegador entende o tipo de documento e como ele deve interpretar as tags nele
+            contidas.)
+            a> Define um hyperlink;
+            abbr> Define uma abreviação
+            address> Define um endereço. (Passa a ser tratado como uma seção);
+            area> Define uma área dentro de um mapa de imagem;
+            b> Define um texto em negrito; (Possui o mesmo nível semântico que um SPAN, e também o estilo de
+            negrito no texto. Contudo, ele não dá nenhuma importância para o texto marcado com ele.)
+            base> Define uma base URL para todos os links da página;
+            bdo> Define a direção do texto apresentado;
+            blockquote> Define uma citação longa;
+
+            body> Define o corpo da página;
+            br> Insere uma quebra de linha simples;
+            button> Define um botão de comando;
+            caption> Define o "caption" de uma tabela;
+            cite> Define uma citação;
+            code> Define o código texto do computador;
+
+            col> Define os atributos da coluna da tabela;
+            colgroup> Define um grupo de colunas da tabela;
+            dd> Define uma descrição de definição;
+            del> Define um texto deletado;
+            dfn> Define um termo de definição;
+            div> Define uma seção no documento;
+            dl> Define uma lista de definição;
+            dt> Define um termo de definição;
+            em> Define um texto em ênfase;
+            fieldset> Define um conjunto de campos (fieldset);
+            form> Define um formulário;
+            h1> até >h6> Define do cabeçalho 1 até o cabeçalho 6;
+            head> Define uma informação sobre o documento. (Não aceita mais elementos Child como filho);
+            hr> Define uma regra horizontal. (Tem o mesmo nível que um parágrafo, mas também é utilizado para fazer
+            separações e quebras de linha);
+            html> Define um documento html;
+            i> Define um texto em itálico; (Possui o mesmo nível semântico que um SPAN. O texto continua sendo itálico e
+            para usuários de leitores de tela, a voz utilizada é modificada para indicar ênfase. É de grande valor e
+            utilidade para marcar, termos técnicos, termos em outras linguagens etc.)
+            iframe> Define uma linhas sobre a janela (frame);
+            img> Define uma imagem;
+            input> Define um campo de inserção;
+            ins> Define um texto inserido;
+            kbd> Define um texto do teclado;
+            label> Define uma "label" para o formulário;
+            legend> Define um título para os campos (fields);
+            li> Define os itens da lista;
+            link> Define uma referência;
+            map> Define uma imagem de mapa;
+            menu> Define uma lista de "menus";
+            meta> Define informações meta;
+            noscript> Define uma seção noscript;
+            object> Define um objeto incorporado;
+            ol> Define uma lista ordenada;
+            optgroup> Define um grupo de opção;
+            option> Define uma opção em uma lista suspensa (drop-down list);
+            p> Define um parágrafo;
+            param> Define um parâmetro para determinado objeto;
+            pre> Define um texto pré-formatado;
+            q> Define uma citação curta;
+            s> Define um texto que não é mais correto.
+            samp> Define um código de amostra;
+            script> Define um script;
+            select> Define uma lista selecionável;
+            small> Define um pequeno texto;
+            span> Define uma seção no documento;
+
+            strong> Define um texto forte (similar ao negrito);
+            style> Define um estilo;
+            sub> Define um texto subscrito;
+            sup> Define um texto sobrescrito;
+            table> Define uma tabela;
+            tbody> Define o corpo da tabela;
+            td> Define uma célula da tabela;
+            textarea> Define um área de texto;
+            tfoot> Define o rodapé da tabela;
+            th> Define o cabeçalho da tabela;
+            thead> Define o cabeçalho da tabela;
+            title> Define o título do documento;
+            tr> Define uma linha da tabela;
+            ul> Define uma lista desordenada;
+            var> Define uma variável;"
+            /p>
+            /html>
+        </i>
+    </p>
+    <small><a href="#incio">(Voltar ao inicio)</a></small>
+
+    <h3 id="atributos">Atributos básicos</h3>
+    <p><i>No artigo anterior vimos os elementos de um formulário no HTML, neste artigo partiremos para os atributos dos
+            elementos.
+
+            Atributos HTML são palavras especiais usadas dentro da tag de abertura para controlar o comportamento do
+            elemento. Os atributos HTML são um modificador de um tipo de elemento HTML. Com eles podemos identificar
+            melhor um elemento, informar qual arquivo aquela tag deve utilizar, indicar o tipo de um campo de texto,
+            etc…
+
+            Há dois tipos de atributos no HTML, os globais que são aceitos por todas as tags, como por exemplo: class,
+            id, lang, style e algumas outras que você pode conferir na documentação também existem os específicos que
+            somente algumas tags possuem, como src, disabled, href, label, etc…</i></p>
+    <small><a href="#inicio">(Voltar ao inicio)</a></small>
+
+    <h3 id="textos">Textos no <strong>HTML</strong></h3>
+    <p><i>Um dos principais objetivos do HTML é dar estrutura de texto e significado, também conhecido como semântica),
+            para que um navegador possa exibi-lo corretamente. Este artigo explica a forma como HTML pode ser usado para
+            estruturar uma página de texto, adicionar títulos e parágrafos, enfatizar palavras, criar listas e muito
+            mais.</i></p>
+    <small><a href="#inicio">(Voltar ao inicio)</a></small>
+
+    <h3 id="listas">Listas ordenadas e não ordenadas no <strong>HTML</strong></h3>
+    <p><i>O Elemento HTML ol> (ou Elemento HTML de lista ordenada) representa uma lista de itens ordenados. De forma
+            característica esses itens ordenados em uma lista são mostrados com uma contagem que os precede, que
+            pode ser de qualquer tipo, como numerais, letras, algarismos romanos, ou simples símbolos. Esse modelo
+            numerado não é definido na descrição html da página, mas na folha de estilos CSS associada, pela
+            propriedade list-style-type (en-US).</i></p>
+
+    <small><a href="#inicio">(Voltar ao inicio)</a></small>
+
+    <h3 id="links">links</h3>
+    <ol>
+        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/ol" target="_blank"
+                rel="noopener noreferrer">Lista ordenada e não ordenadas</a></li>
+        <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+                target="_blank" rel="noopener noreferrer">Texto HTML 5</a></li>
+        <li><a href="https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-5-atributos-elementos"
+                target="_blank" rel="noopener noreferrer">Atributos</a></li>
+        <li><a href="https://www.devmedia.com.br/comandos-e-tags-html5/23618" target="_blank"
+                rel="noopener noreferrer">Tags HTML5 </a></li>
+        <li><a href="https://flatschart.com/html5/estrutura.html" target="_blank" rel="noopener noreferrer">Estrutura
+                básica HTML 5</a></li>
+    </ol>
+</body>
+
+</html>
